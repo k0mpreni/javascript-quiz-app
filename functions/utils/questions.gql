@@ -1,0 +1,17 @@
+type Choices {
+  key: String!
+  value: String!
+  question: Question
+}
+
+type Question {
+  title: String!
+  snippet: String
+  choices: [Choices!]! @relation
+  answer: String!
+  explanation: String!
+}
+
+type Query {
+  allQuestions: [Question!]!
+}

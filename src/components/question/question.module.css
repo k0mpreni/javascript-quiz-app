@@ -1,0 +1,42 @@
+.title {
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.choices {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.choice {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #b8b8d1;
+  padding: 1rem;
+  align-items: center;
+  border-radius: 20px;
+  margin: 0.875rem;
+  width: 300px;
+}
+
+.choiceLabel {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: baseline;
+}
+
+.choiceKey {
+  font-weight: 800;
+  font-size: 20px;
+  margin-right: 5px;
+}
