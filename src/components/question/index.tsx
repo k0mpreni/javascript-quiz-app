@@ -1,9 +1,12 @@
 import React from 'react';
 import styles from './question.module.css';
+import { Remarkable } from 'remarkable';
+
+const md = new Remarkable();
 
 const Question = ({ question }) => (
   <div className={styles.content}>
-    <h1>{question.title}</h1>
+    <h1 dangerouslySetInnerHTML={{ __html: md.render(question.title) }} />
     {question.snippet && (
       <pre>
         <code>{question.snippet}</code>
@@ -11,13 +14,11 @@ const Question = ({ question }) => (
     )}
     <form>
       <fieldset id="choices" className={styles.choices}>
-        {question.choices.data.map((choice, index) => (
+        {question.choices.map((choice, index) => (
           <div className={styles.choice} key={index}>
             <label className={styles.choiceLabel}>
               <span className={styles.choiceKey}>{choice.key}:</span>
-              <p>
-                {choice.value}
-              </p>
+              <p dangerouslySetInnerHTML={{ __html: md.render(choice.value) }} />
             </label>
             <input
               type="radio"
