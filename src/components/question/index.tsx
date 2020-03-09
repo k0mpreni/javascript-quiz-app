@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './question.module.css';
 import { Remarkable } from 'remarkable';
 
 const md = new Remarkable();
 
-const Question = ({ question }) => (
+const Question = ({ question }) => {
+  const [answer, setAnswer] = useState();
+
+  return (
   <div className={styles.content}>
     <h1 dangerouslySetInnerHTML={{ __html: md.render(question.title) }} />
     {question.snippet && (
-      <pre>
+      <pre >
         <code>{question.snippet}</code>
       </pre>
     )}
@@ -16,15 +19,11 @@ const Question = ({ question }) => (
       <fieldset id="choices" className={styles.choices}>
         {question.choices.map((choice, index) => (
           <div className={styles.choice} key={index}>
-            <label className={styles.choiceLabel}>
-              <span className={styles.choiceKey}>{choice.key}:</span>
-              <p dangerouslySetInnerHTML={{ __html: md.render(choice.value) }} />
-            </label>
-            <input
-              type="radio"
-              id={choice.key}
-              value={choice.key}
-              name="choices" />
+            <input className={styles.state} type="radio" name="app" id={choice.key} value={choice.key} disabled={choice.key === answer} onChange={e => setAnswer(e.target.value)} />
+              <label className={styles.choiceLabel} htmlFor={choice.key}>
+                <div className={styles.indicator}></div>
+                <span className={styles.text}>{choice.key}: <span className={styles.choiceHTML} dangerouslySetInnerHTML={{ __html: md.render(choice.value) }}></span> </span>
+              </label>
           </div>
         ))}
       </fieldset>
@@ -44,6 +43,6 @@ const Question = ({ question }) => (
     {/if}
   {/if} */}
   </div>
-)
+)}
 
 export default Question;
