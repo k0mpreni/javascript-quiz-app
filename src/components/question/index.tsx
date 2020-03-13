@@ -23,9 +23,11 @@ const Question = ({ question }) => {
     <div className={styles.content}>
       <h1 className={styles.title} dangerouslySetInnerHTML={{ __html: md.render(question.title) }} />
       {question.snippet && (
-        <pre className={styles.snippet}>
-          <code>{question.snippet}</code>
-        </pre>
+        <div className={styles.snippetWrapper}>
+          <pre className={styles.snippet}>
+            <code>{question.snippet}</code>
+          </pre>
+        </div>
       )}
       <form>
         <fieldset id="choices" className={styles.choices}>
@@ -39,8 +41,10 @@ const Question = ({ question }) => {
           ))}
         </fieldset>
       </form>
-      <div className={cx(styles.explanation, { [styles.showExplanation]: disableInput })}
-        dangerouslySetInnerHTML={{ __html: md.render(question.explanation) }} />
+      {disableInput && (
+        <div className={styles.explanation}
+          dangerouslySetInnerHTML={{ __html: md.render(question.explanation) }} />
+      )}
       <Link className={styles.link} to={nextQuestion === 145 ? `/` : `/${nextQuestion}`}>Go to next question</Link>
     </div>
   )

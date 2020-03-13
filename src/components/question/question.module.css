@@ -25,8 +25,17 @@
   max-width: 350px;
 }
 
+.snippetWrapper {
+  display: grid;
+
+grid-template-columns: 10% 1fr 10%;
+}
+
 .snippet {
   padding: 1.45rem;
+  width: 100%;
+  overflow-x: scroll;
+  grid-column: 2;
 }
 
 .choice {
@@ -118,18 +127,9 @@
   padding: 0 1rem;
   max-width: 600px;
   text-align: center;
-  visibility: hidden;
-  opacity: 0;
-  height: 0;
-}
-
-.showExplanation.explanation {
-  visibility: visible;
-  opacity: 1;
-  height: 100%;
-  transition: 0.3s ease-in-out;
 }
 
 .link {
   color: #fffffb;
+  margin: 1rem 0;
 }
