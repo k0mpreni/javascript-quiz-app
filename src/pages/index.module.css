@@ -1,0 +1,14 @@
+.title {
+  text-align: center;
+  margin: 1rem 0;
+  color: #ffda45;
+}
+
+
+.link {
+  text-align: center;
+}
+
+.link > a {
+  color: #fffffb;
+}

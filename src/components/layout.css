@@ -2,7 +2,7 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  background-color: #ecf0f3;
+  background-color: rgb(38, 48, 59);
 }
 body {
   margin: 0;
@@ -200,7 +200,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: hsla(0, 0%, 0%, 0.8);
+  color: #fffffb;
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -404,7 +404,7 @@ pre {
   margin-bottom: 1.45rem;
   font-size: 0.85rem;
   line-height: 1.42;
-  background: hsla(0, 0%, 0%, 0.04);
+  background: rgba(184, 184, 209, 0.2);
   border-radius: 3px;
   overflow: auto;
   word-wrap: normal;
