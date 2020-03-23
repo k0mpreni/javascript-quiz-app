@@ -18,8 +18,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `JS Quiz`,
-        short_name: `starter`,
+        name: `JS Quiz App`,
+        short_name: `JS Quiz`,
         start_url: `/`,
         background_color: `#26303B`,
         theme_color: `#26303B`,
