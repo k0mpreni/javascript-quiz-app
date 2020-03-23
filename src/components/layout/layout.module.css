@@ -8,6 +8,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
 }
 article,
 aside,
@@ -620,4 +621,12 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+.mainWrapper {
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
