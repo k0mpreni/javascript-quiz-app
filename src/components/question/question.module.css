@@ -27,13 +27,12 @@
 
 .snippetWrapper {
   display: grid;
-
-grid-template-columns: 10% 1fr 10%;
+  grid-template-columns: 10% 1fr 10%;
 }
 
 .snippet {
   padding: 1.45rem;
-  width: 100%;
+  width: 20rem;
   overflow-x: scroll;
   grid-column: 2;
 }
@@ -114,7 +113,7 @@ grid-template-columns: 10% 1fr 10%;
 }
 
 .choiceHTML > p code {
-  background: rgba(184, 184, 209, 0.04);
+  background: rgba(39, 40, 34, 0.2);
 }
 
 .choiceKey {
@@ -127,6 +126,12 @@ grid-template-columns: 10% 1fr 10%;
   padding: 0 1rem;
   max-width: 600px;
   text-align: center;
+}
+
+.explanation img {
+  display: flex;
+  width: 75%;
+  margin: 0 auto;
 }
 
 .link {

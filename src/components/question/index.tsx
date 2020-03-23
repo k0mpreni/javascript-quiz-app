@@ -1,15 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import cx from 'classnames';
 import { Link } from "gatsby"
 
 import styles from './question.module.css';
 import { Remarkable } from 'remarkable';
+import Prism from "prismjs"
 
-const md = new Remarkable();
+const md = new Remarkable({html: true});
 
 const Question = ({ question }) => {
   const [answer, setAnswer] = useState();
   const [disableInput, setDisableInput] = useState(false);
+
+  useEffect(() => {
+    // call the highlightAll() function to style our code blocks
+    Prism.highlightAll()
+  })
 
   const handleChange = e => {
     setAnswer(e.target.value);
@@ -25,7 +31,7 @@ const Question = ({ question }) => {
       {question.snippet && (
         <div className={styles.snippetWrapper}>
           <pre className={styles.snippet}>
-            <code>{question.snippet}</code>
+            <code className="language-javascript">{question.snippet}</code>
           </pre>
         </div>
       )}

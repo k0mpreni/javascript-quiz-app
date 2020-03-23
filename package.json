@@ -6,6 +6,8 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "axios": "^0.19.2",
+    "babel-plugin-prismjs": "^2.0.1",
+    "babel-preset-gatsby": "^0.3.1",
     "classnames": "^2.2.6",
     "dotenv": "^8.2.0",
     "gatsby": "^2.19.7",
@@ -18,6 +20,7 @@
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-transformer-json": "^2.2.27",
     "gatsby-transformer-sharp": "^2.3.13",
+    "prismjs": "^1.19.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
