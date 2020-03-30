@@ -51,7 +51,10 @@ const Question = ({ question }) => {
         <div className={styles.explanation}
           dangerouslySetInnerHTML={{ __html: md.render(question.explanation) }} />
       )}
-      <Link className={styles.link} to={nextQuestion === 145 ? `/` : `/${nextQuestion}`}>Go to next question</Link>
+      {nextQuestion === 145 ?
+        <Link className={styles.link} to="/">Go back to the home page</Link> : 
+        <Link className={styles.link} to={`/${nextQuestion}`}>Go to next question</Link>
+      }
     </div>
   )
 }

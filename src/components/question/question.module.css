@@ -32,7 +32,7 @@
 
 .snippet {
   padding: 1.45rem;
-  width: 20rem;
+  width: 40rem;
   overflow-x: scroll;
   grid-column: 2;
 }
@@ -137,4 +137,15 @@
 .link {
   color: #fffffb;
   margin: 1rem 0;
+}
+
+@media (max-width: 700px) {
+  .snippet {
+    width: 30rem
+  }
+}
+@media (max-width: 560px) {
+  .snippet {
+    width: 20rem
+  }
 }
