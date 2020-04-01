@@ -92,7 +92,7 @@
   {
     "id":8,
     "title":"What's the output?",
-    "snippet":"class Chameleon {\n  static colorChange(newColor) {\n    this.newColor = newColor;\n    return this.newColor;\n  }\n\n  constructor({ newColor = 'green' } = {}) {\n    this.newColor = newColor;\n  }\n}",
+    "snippet":"class Chameleon {\n  static colorChange(newColor) {\n    this.newColor = newColor;\n    return this.newColor;\n  }\n\n  constructor({ newColor = 'green' } = {}) {\n    this.newColor = newColor;\n  }\n} \n\nconst freddie = new Chameleon({ newColor: 'purple' }); \nconsole.log(freddie.colorChange('orange'));",
     "choices":[
       {"key":"A","value":" `orange`"},
       {"key":"B","value":" `purple`"},
