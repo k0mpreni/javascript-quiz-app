@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "babel-plugin-prismjs": "^2.0.1",
     "babel-preset-gatsby": "^0.3.1",
     "classnames": "^2.2.6",
